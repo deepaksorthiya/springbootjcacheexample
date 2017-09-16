@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    #using MySql
+    url: jdbc:mysql://localhost:3306/testdb
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    #using MSSQL Server
+#    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#    url: jdbc:sqlserver://localhost;databaseName=sampledatabase
+#    username: sa
+#    password: 123123
+  # Show or not log for each sql query
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      # Hibernate ddl auto (create, create-drop, update)
+      ddl-auto: update
+    properties:
+      hibernate:
+       # dialect: org.hibernate.dialect.SQLServer2012Dialect
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        show_sql: true
